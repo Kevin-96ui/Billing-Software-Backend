@@ -23,6 +23,10 @@ app.use(cors({   // CORS setup
   methods: ["GET", "POST", "PUT", "DELETE"]
 }));
 
+app.get('/', (req, res) => {
+  res.send('Billing Software Backend is Running');
+});
+
 // Route handlers
 app.use("/rootadmin", rootadminRouter); 
 app.use("/user", userRouter); 
